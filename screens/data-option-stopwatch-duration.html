@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>타이머 시간 선택 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>타이머 시간 선택</h1><p class="lead">기능 연결</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>data-option-stopwatch-duration</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>스톱워치 상세 → 카운트다운 시간</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>시·분·초</li><li>스크롤</li><li>0시간 적용 비활성</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>3열 시간 휠</li><li>기간 형식</li></ul></dd></div><div><dt>평가</dt><dd>숫자 선택과 기간 유효성은 서로 다른 역할입니다. 세 컬럼 아래에 읽을 수 있는 레이블을 둡니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>컴포넌트 렌더 확인</dd></div><div><dt>실행 근거</dt><dd>API 35에서 카운트다운의 3열 시간 선택과 상세 복귀를 확인했습니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>DataConnectionValueSourceOptionSelectionContent</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/DataConnectionValueSourceDialog.kt#L722"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/DataConnectionValueSourceDialog.kt:722</code></a></li><li><code>StopwatchDurationInputs</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/DataConnectionValueSourceDialog.kt#L1071"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/DataConnectionValueSourceDialog.kt:1071</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/studio-wheel-picker.html">StudioWheelPicker</a></li><li><a href="../components/studio-section-card.html">StudioSectionCard</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

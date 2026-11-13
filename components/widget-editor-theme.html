@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>WidgetEditorTheme · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html" aria-current="page">컴포넌트</a><a href="../screens/index.html">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">컴포넌트</a></p><h1>WidgetEditorTheme</h1><p class="lead">Compose 앱 화면에 밝은·어두운 색 역할, 글꼴 계층, 모양을 제공합니다.</p><dl class="facts"><div><dt>컴포넌트 ID</dt><dd><code>widget-editor-theme</code></dd></div><div><dt>분류</dt><dd>기반</dd></div><div><dt>구현</dt><dd><code>WidgetEditorTheme</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/Theme.kt#L99"><code>MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/Theme.kt:99</code></a></dd></div><div><dt>주요 API</dt><dd>darkTheme, content</dd></div><div><dt>지원 상태</dt><dd><ul><li>시스템 밝은 모드</li><li>시스템 어두운 모드</li><li>호출자가 지정한 모드</li></ul></dd></div><div><dt>변형</dt><dd><ul><li>LightColorScheme</li><li>DarkColorScheme</li></ul></dd></div><div><dt>크기</dt><dd><ul><li>타이포그래피 sp</li><li>모양 dp</li></ul></dd></div><div><dt>테마·토큰</dt><dd><ul><li>MaterialTheme.colorScheme</li><li>WidgetEditorTypography</li><li>WidgetEditorShapes</li></ul></dd></div><div><dt>접근성·사용 규칙</dt><dd>색상 쌍으로 배경·전경의 의미를 전달합니다. XML 창 테마와 Compose 색 역할은 각 경계에서 적용합니다.</dd></div><div><dt>공통 사용 여부</dt><dd>모든 앱 Activity의 Compose 루트에서 사용</dd></div><div><dt>설계 품질</dt><dd>앱 전용 색 역할과 작성 위젯 색이 분리됨</dd></div><div><dt>판단</dt><dd>유지</dd></div><div><dt>판단 근거</dt><dd>정적 브랜드 팔레트와 위젯 편집 중 작성 색상 사이의 경계를 보존합니다.</dd></div><div><dt>비고</dt><dd>위젯 탭에서 여는 투명 Activity 3개는 밝은 테마를 명시합니다. 각 Activity의 실제 정책은 화면 항목에 표시합니다.</dd></div><div><dt>구현·문서</dt><dd>현재 소스 위치와 심볼 확인</dd></div><div><dt>렌더링</dt><dd>미검증</dd></div></dl><h2>코드 예시</h2><p class="meta">실제 소스에서 발췌 · <code>WidgetEditorTheme</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/core/app/MainActivity.kt#L25"><code>MyWidget/app/src/main/java/com/mywidget/editor/core/app/MainActivity.kt:25</code></a></p><pre tabindex="0"><code>WidgetEditorTheme {
+    CompositionLocalProvider(LocalDataConnectionSourceUiRegistry provides sourceUiRegistry) {
+        WidgetEditorApp()
+    }
+}</code></pre><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p><h2>사용 화면</h2><ul><li><a href="../screens/home-dashboard.html">홈 위젯 대시보드</a></li><li><a href="../screens/widget-setup-start.html">미설정 위젯 시작</a></li><li><a href="../screens/widget-setup-configured.html">구성된 위젯 편집·업데이트</a></li><li><a href="../screens/saved-library.html">저장 위젯 보관함</a></li><li><a href="../screens/template-gallery.html">위젯 템플릿 갤러리</a></li><li><a href="../screens/generate-prompt.html">AI 위젯 프롬프트</a></li><li><a href="../screens/generate-clarification.html">AI 위젯 질문과 답변</a></li><li><a href="../screens/generate-preview.html">AI 위젯 미리보기·저장</a></li><li><a href="../screens/health-rationale.html">Health Connect 권한 설명</a></li><li><a href="../screens/editor-workspace.html">편집 작업 영역과 상단바</a></li><li><a href="../screens/widget-dialog-data.html">설치 위젯 기능 연결 옵션</a></li><li><a href="../screens/widget-dialog-custom-text.html">설치 위젯 Custom 텍스트</a></li><li><a href="../screens/widget-dialog-custom-progress.html">설치 위젯 Custom 진행률</a></li><li><a href="../screens/widget-dialog-custom-list.html">설치 위젯 Custom 목록</a></li><li><a href="../screens/widget-dialog-default-text.html">설치 위젯 기본 문구 동작</a></li><li><a href="../screens/widget-dialog-default-list.html">설치 위젯 기본 목록·항목 동작</a></li><li><a href="../screens/widget-dialog-default-image.html">설치 위젯 기본 이미지 교체</a></li><li><a href="../screens/widget-dialog-default-icon.html">설치 위젯 기본 아이콘 편집</a></li><li><a href="../screens/design-showcase.html">디자인 시스템 쇼케이스</a></li></ul><h2>관련 컴포넌트</h2><ul><li><a href="studio-card-defaults.html">StudioCardDefaults</a></li><li><a href="studio-sheet.html">StudioSheet</a></li></ul>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

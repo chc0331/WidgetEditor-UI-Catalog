@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>프레임 손그림 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>프레임 손그림</h1><p class="lead">편집기</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>editor-frame-drawing</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>편집기 → 배경 → 손그림 드로잉 → 도구·브러시 옵션</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>펜·지우개</li><li>색·폭</li><li>브러시 팝업</li><li>지우기</li><li>이동·동작 패드</li><li>제한</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>도구 선택·색상·수치 조절</li><li>제스처 패드</li></ul></dd></div><div><dt>평가</dt><dd>캔버스와 패드는 전문 조작입니다. 선택·색·범위만 공용 조절기를 사용합니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>컴포넌트 렌더 확인</dd></div><div><dt>실행 근거</dt><dd>API 35 DrawingSettingsPresentationTest에서 펜 설정, 색상과 그라데이션 입력, 취소와 적용, RTL, 짧은 화면과 큰 글꼴을 확인했습니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>CompactRailDrawingPanelContent</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/compact/rail/CompactRailDrawingPanelContent.kt#L83"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/compact/rail/CompactRailDrawingPanelContent.kt:83</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/studio-section-card.html">StudioSectionCard</a></li><li><a href="../components/studio-section-divider.html">StudioSectionDivider</a></li><li><a href="../components/studio-option.html">StudioOption</a></li><li><a href="../components/studio-color-swatch-bar.html">StudioColorSwatchBar</a></li><li><a href="../components/studio-palette-button.html">StudioPaletteButton</a></li><li><a href="../components/studio-segmented-track.html">StudioSegmentedTrack</a></li><li><a href="../components/studio-slider.html">StudioSlider</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

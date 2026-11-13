@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>구성된 위젯 편집·업데이트 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>구성된 위젯 편집·업데이트</h1><p class="lead">설치 위젯 설정</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>widget-setup-configured</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>홈 구성된 슬롯 또는 런처 재설정 → WidgetSetupActivity → EditorScreen</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>바인딩 조회</li><li>기존 문서 편집</li><li>업데이트 결과</li><li>종료</li><li>잘못된 ID</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>편집기 재사용</li><li>업데이트 CTA</li></ul></dd></div><div><dt>평가</dt><dd>별도 에디터를 만들지 않고 동일한 EditorScreen에 위젯 ID와 문서 ID를 전달합니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>컴포넌트 렌더 확인</dd></div><div><dt>실행 근거</dt><dd>API 35 EditorHostLayoutOverviewTest에서 크기별 화면, 적용 가능 상태, 짧은 화면과 큰 글꼴의 적용 동작을 확인했습니다. 런처와 실제 업데이트는 미확인입니다.</dd></div><div><dt>접근 조건</dt><dd>이미 구성된 QA 런처 위젯과 저장 문서.</dd></div></dl><h2>구현 위치</h2><ul><li><code>WidgetSetupActivity</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/widgetsetup/WidgetSetupActivity.kt#L29"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/widgetsetup/WidgetSetupActivity.kt:29</code></a></li><li><code>EditorScreen</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorScreen.kt#L83"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorScreen.kt:83</code></a></li><li><code>EditorPreviewTitleBar</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorPreviewTitleBar.kt#L32"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorPreviewTitleBar.kt:32</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/widget-editor-theme.html">WidgetEditorTheme</a></li><li><a href="../components/studio-outline-icon-button.html">StudioOutlineIconButton</a></li><li><a href="../components/studio-primary-toolbar-button.html">StudioPrimaryToolbarButton</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

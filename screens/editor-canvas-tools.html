@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>프리뷰 위 선택·편집 도구 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>프리뷰 위 선택·편집 도구</h1><p class="lead">편집기</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>editor-canvas-tools</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>편집기 → 캔버스 블록 선택 또는 도구 버튼</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>빈 문서 추가</li><li>선택·해제</li><li>복제·삭제 확인</li><li>임시 보관</li><li>읽기 전용 좁은 프리뷰</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>떠 있는 버튼</li><li>캔버스와 클릭 제스처</li><li>삭제 확인</li></ul></dd></div><div><dt>평가</dt><dd>캔버스 핸들과 작성한 블록 레이아웃은 도구 고유 표현으로 유지합니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>컴포넌트 렌더 확인</dd></div><div><dt>실행 근거</dt><dd>API 34 EditorStudioWorkspaceTest에서 해당 탭과 조작을 검증했습니다. 좁고 낮은 화면, 글꼴 확대, 한·영, 라이트·다크 테스트를 포함합니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>EditorPreviewStage</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorPreviewStage.kt#L65"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorPreviewStage.kt:65</code></a></li><li><code>PreviewTopControls</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/PreviewTopControls.kt#L43"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/PreviewTopControls.kt:43</code></a></li><li><code>EmptyDocumentCta</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorEmptyDocumentCta.kt#L38"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorEmptyDocumentCta.kt:38</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/studio-outline-icon-button.html">StudioOutlineIconButton</a></li><li><a href="../components/studio-dialog.html">StudioDialog</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

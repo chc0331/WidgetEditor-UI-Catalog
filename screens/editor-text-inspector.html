@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>텍스트 인스펙터 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>텍스트 인스펙터</h1><p class="lead">편집기</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>editor-text-inspector</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>편집기 → 텍스트</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>블록 없음</li><li>미선택</li><li>일반 입력</li><li>기능 연결 읽기 전용</li><li>달력 색</li><li>자동 맞춤</li><li>굵기·정렬</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>속성 카드</li><li>값·색상 선택</li><li>선택 그리드</li></ul></dd></div><div><dt>평가</dt><dd>미선택 상태와 쓰기 가능한 일반·연결 상태를 동일한 조작 밀도로 배치합니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>컴포넌트 렌더 확인</dd></div><div><dt>실행 근거</dt><dd>API 34 EditorStudioWorkspaceTest에서 해당 탭과 조작을 검증했습니다. 좁고 낮은 화면, 글꼴 확대, 한·영, 라이트·다크 테스트를 포함합니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>StudioTextSummary</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/StudioTextInspector.kt#L56"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/StudioTextInspector.kt:56</code></a></li><li><code>StudioBlockChoices</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/StudioBlockChoices.kt#L38"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/StudioBlockChoices.kt:38</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/studio-section-card.html">StudioSectionCard</a></li><li><a href="../components/studio-section-divider.html">StudioSectionDivider</a></li><li><a href="../components/studio-option.html">StudioOption</a></li><li><a href="../components/studio-color-swatch-bar.html">StudioColorSwatchBar</a></li><li><a href="../components/studio-palette-button.html">StudioPaletteButton</a></li><li><a href="../components/studio-block-choice-grid.html">StudioBlockChoiceGrid</a></li><li><a href="../components/studio-block-choice-chip.html">StudioBlockChoiceChip</a></li><li><a href="../components/studio-switch.html">StudioSwitch</a></li><li><a href="../components/studio-segmented-track.html">StudioSegmentedTrack</a></li><li><a href="../components/studio-slider.html">StudioSlider</a></li><li><a href="../components/studio-stepper.html">StudioStepper</a></li><li><a href="../components/studio-option-value.html">StudioOptionValue</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

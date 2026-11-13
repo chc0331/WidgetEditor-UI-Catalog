@@ -1,0 +1,128 @@
+:root {
+  color-scheme: light;
+  --bg: var(--app-background, Canvas);
+  --surface: var(--app-surface, Canvas);
+  --raised: var(--app-surface-variant, Canvas);
+  --ink: var(--app-on-surface, CanvasText);
+  --muted: var(--app-on-surface-variant, CanvasText);
+  --accent: var(--app-accent-text, LinkText);
+  --accent-surface: var(--app-primary-container, Canvas);
+  --accent-ink: var(--app-on-primary-container, CanvasText);
+  --rule: var(--app-outline-variant, GrayText);
+  font-family: "Noto Sans KR", system-ui, sans-serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+}
+:root[data-theme="dark"] { color-scheme: dark; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) { color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+a { color: var(--accent); text-underline-offset: .16em; }
+a:hover { text-decoration-thickness: .14em; }
+::selection { color: var(--accent-ink); background: var(--accent-surface); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+button, input, select { font: inherit; color: inherit; caret-color: var(--accent); }
+input, select, button {
+  min-height: 44px;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  padding: .4rem .75rem;
+  background: var(--surface);
+}
+button { cursor: pointer; }
+button:hover { background: var(--raised); }
+.skip { position: absolute; left: 1rem; top: .5rem; transform: translateY(-200%); }
+.skip:focus { transform: none; z-index: 2; background: var(--surface); padding: .5rem; }
+.masthead, .layout, .footer {
+  max-width: 87rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+.masthead {
+  min-height: 4.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: .45rem;
+  border-bottom: 1px solid var(--rule);
+}
+.wordmark { color: var(--ink); font-size: 1.125rem; font-weight: 700; text-decoration: none; }
+.wordmark span { color: var(--muted); font-size: .94rem; font-weight: 500; margin-inline-start: .3rem; }
+.layout { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: clamp(2rem, 4vw, 4rem); }
+.navigation {
+  align-self: start;
+  position: sticky;
+  top: 1rem;
+  display: grid;
+  margin-block: 2.5rem;
+  gap: .15rem;
+}
+.navigation a { display: flex; align-items: center; min-height: 44px; color: var(--ink); padding: .35rem .7rem; text-decoration: none; border-radius: 8px; }
+.navigation a:hover { background: var(--raised); }
+.navigation a[aria-current] { background: var(--accent-surface); color: var(--accent-ink); font-weight: 650; }
+main { min-width: 0; min-height: 72vh; padding-block: 2.7rem 5rem; }
+main > :first-child { margin-top: 0; }
+h1, h2, h3 { line-height: 1.27; letter-spacing: -.025em; overflow-wrap: anywhere; }
+h1 { font-size: 2.45rem; margin: 0 0 .6rem; }
+h2 { font-size: 1.35rem; margin: 2.7rem 0 .7rem; }
+h3 { font-size: 1.08rem; margin: 0 0 .35rem; }
+p { margin: .4rem 0 .9rem; max-inline-size: 72ch; overflow-wrap: anywhere; }
+p.lead { color: var(--muted); font-size: 1.06rem; }
+ul { padding-inline-start: 1.25rem; }
+.breadcrumb { margin: 0 0 .8rem; font-size: .9rem; }
+.meta, figcaption, .footer, .filter-count { color: var(--muted); font-size: .88rem; }
+.meta { overflow-wrap: anywhere; }
+.index-list { list-style: none; margin: 1.35rem 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.index-list > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 12rem);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+.index-list h3 a { text-decoration: none; }
+.index-list h3 a:hover { text-decoration: underline; }
+.index-list p { margin: .25rem 0 0; }
+.index-list .meta { text-align: end; }
+.filters { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.5rem 0 .7rem; }
+.filters label { display: flex; flex-direction: column; gap: .25rem; min-width: 8rem; }
+.filters label.search { flex: 1 1 15rem; }
+.filters input, .filters select { width: 100%; }
+.filter-count { margin: 0; }
+.facts { margin: .8rem 0 0; border-top: 1px solid var(--rule); }
+.facts > div { display: grid; grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr); gap: .8rem; border-bottom: 1px solid var(--rule); padding-block: .58rem; }
+.facts dt { font-weight: 650; }
+.facts dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.facts dd p { margin: 0; }
+.facts dd ul { margin: 0; }
+code, pre, .numeric { font-variant-numeric: tabular-nums; }
+code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .92em; overflow-wrap: anywhere; }
+pre { background: var(--raised); border: 1px solid var(--rule); border-radius: 10px; padding: .9rem; max-width: 100%; overflow: auto; }
+pre code { overflow-wrap: normal; }
+.capture-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1.2rem; margin-top: 1rem; }
+figure { margin: 0; min-width: 0; }
+.capture-frame { padding: .75rem; background: var(--raised); border: 1px solid var(--rule); border-radius: 12px; }
+figure img { display: block; width: auto; max-width: 100%; max-height: 38rem; margin-inline: auto; object-fit: contain; }
+figcaption { margin-top: .5rem; }
+.color-value { display: inline-flex; align-items: center; gap: .5rem; }
+.color-chip { display: inline-block; width: 1.3rem; height: 1.3rem; border: 1px solid var(--muted); border-radius: .25rem; background: var(--sample); }
+.footer { border-top: 1px solid var(--rule); padding-block: 1rem 1.5rem; }
+@media (max-width: 48rem) {
+  .layout { display: block; }
+  .navigation { display: flex; flex-wrap: wrap; position: static; margin: .55rem -.35rem 0; }
+  .navigation a { padding-inline: .55rem; font-size: .95rem; }
+  main { padding-top: 1.85rem; }
+  h1 { font-size: 1.95rem; }
+}
+@media (max-width: 34rem) {
+  .index-list > li { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+  .index-list .meta { text-align: start; }
+  .facts > div { grid-template-columns: minmax(0, 1fr); gap: .2rem; }
+}

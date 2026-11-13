@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>StudioPaletteButton · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html" aria-current="page">컴포넌트</a><a href="../screens/index.html">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">컴포넌트</a></p><h1>StudioPaletteButton</h1><p class="lead">색상 팔레트를 여는 아이콘 조작기입니다.</p><dl class="facts"><div><dt>컴포넌트 ID</dt><dd><code>studio-palette-button</code></dd></div><div><dt>분류</dt><dd>선택</dd></div><div><dt>구현</dt><dd><code>StudioPaletteButton</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/component/StudioColorSwatchBar.kt#L144"><code>MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/component/StudioColorSwatchBar.kt:144</code></a></dd></div><div><dt>주요 API</dt><dd>onClick, enabled, label, modifier, slotWidth, visualModifier, iconModifier</dd></div><div><dt>지원 상태</dt><dd><ul><li>활성</li><li>비활성</li></ul></dd></div><div><dt>변형</dt><dd><ul><li>독립 아이콘</li><li>스와치 행 내부</li></ul></dd></div><div><dt>크기</dt><dd><ul><li>기본 48×48dp 슬롯</li></ul></dd></div><div><dt>테마·토큰</dt><dd><ul><li>chipSurface</li><li>onSurface</li></ul></dd></div><div><dt>접근성·사용 규칙</dt><dd>팔레트 열기 동작을 현지화된 버튼 이름으로 읽습니다.</dd></div><div><dt>공통 사용 여부</dt><dd>스와치 행·색상 옵션에서 사용</dd></div><div><dt>설계 품질</dt><dd>시각 표면과 접근성 이름을 공유함</dd></div><div><dt>판단</dt><dd>유지</dd></div><div><dt>판단 근거</dt><dd>동일한 팔레트 이동에 동일한 진입 표기를 유지합니다.</dd></div><div><dt>구현·문서</dt><dd>현재 소스 위치와 심볼 확인</dd></div><div><dt>렌더링</dt><dd>네이티브 캡처 있음</dd></div></dl><h2>코드 예시</h2><p class="meta">실제 소스에서 발췌 · <code>StudioPaletteButton</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/component/StudioColorSwatchBar.kt#L128"><code>MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/component/StudioColorSwatchBar.kt:128</code></a></p><pre tabindex="0"><code>StudioPaletteButton(
+    onClick = onOpenPalette,
+    modifier = paletteButtonModifier,
+    enabled = enabled,
+    slotWidth = swatchSlotWidth,
+    visualModifier = paletteVisualTestTag?.let { Modifier.testTag(it) } ?: Modifier,
+    iconModifier = paletteIconTestTag?.let { Modifier.testTag(it) } ?: Modifier,
+)</code></pre><section data-collection><h2>Android 네이티브 예시</h2><p>아래 캡처에 표시된 상태와 기기 조건을 확인했습니다.</p><div class="filters" data-filters hidden><label>캡처 테마<select data-filter="theme"><option value="">전체</option><option value="light">라이트</option><option value="dark">다크</option></select></label><label>상태<select data-filter="state"><option value="">전체</option><option value="enabled">enabled</option></select></label></div><p class="filter-count" data-count role="status"></p><div class="capture-grid"><figure data-entry data-theme="light" data-state="enabled"><div class="capture-frame"><img src="../captures/studio-palette-button-enabled-light.png" alt="enabled · 라이트 Android 캡처" loading="lazy"></div><figcaption><strong>enabled · 라이트</strong><br>411 × 891 dp · 560 dpi · 글꼴 1배 · API 35 · ko-KR<br>캡처 기준 HEAD <code>ff118cc8d</code> · 소스 지문 <code>73da2a0be891</code> · 2026-11-13T10:23:11.274577Z</figcaption></figure><figure data-entry data-theme="dark" data-state="enabled"><div class="capture-frame"><img src="../captures/studio-palette-button-enabled-dark.png" alt="enabled · 다크 Android 캡처" loading="lazy"></div><figcaption><strong>enabled · 다크</strong><br>411 × 891 dp · 560 dpi · 글꼴 1배 · API 35 · ko-KR<br>캡처 기준 HEAD <code>ff118cc8d</code> · 소스 지문 <code>73da2a0be891</code> · 2026-11-13T10:23:11.274577Z</figcaption></figure></div></section><h2>사용 화면</h2><ul><li><a href="../screens/editor-background.html">배경·테두리 인스펙터</a></li><li><a href="../screens/editor-frame-drawing.html">프레임 손그림</a></li><li><a href="../screens/editor-text-inspector.html">텍스트 인스펙터</a></li><li><a href="../screens/editor-color-palette.html">색상·그라데이션 팔레트</a></li><li><a href="../screens/editor-shape-inspector.html">모양 인스펙터</a></li><li><a href="../screens/editor-list-item.html">목록 항목과 템플릿</a></li><li><a href="../screens/editor-icon-drawing.html">직접 아이콘 그리기</a></li><li><a href="../screens/data-calendar-grid.html">달력 연결 설정</a></li><li><a href="../screens/data-memo-ink.html">손글씨 메모 연결</a></li><li><a href="../screens/widget-dialog-default-icon.html">설치 위젯 기본 아이콘 편집</a></li><li><a href="../screens/design-showcase.html">디자인 시스템 쇼케이스</a></li></ul><h2>관련 컴포넌트</h2><ul><li><a href="studio-color-swatch-bar.html">StudioColorSwatchBar</a></li></ul>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

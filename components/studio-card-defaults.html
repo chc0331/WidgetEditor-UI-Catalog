@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>StudioCardDefaults · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html" aria-current="page">컴포넌트</a><a href="../screens/index.html">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">컴포넌트</a></p><h1>StudioCardDefaults</h1><p class="lead">앱 카드에 표면·경계·그림자 계약을 적용합니다.</p><dl class="facts"><div><dt>컴포넌트 ID</dt><dd><code>studio-card-defaults</code></dd></div><div><dt>분류</dt><dd>기반</dd></div><div><dt>구현</dt><dd><code>StudioCardDefaults</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/StudioCardDefaults.kt#L14"><code>MyWidget/app/src/main/java/com/mywidget/editor/core/designsystem/StudioCardDefaults.kt:14</code></a></dd></div><div><dt>주요 API</dt><dd>colors(), border(selected), elevation()</dd></div><div><dt>지원 상태</dt><dd><ul><li>기본</li><li>선택</li><li>비활성</li></ul></dd></div><div><dt>변형</dt><dd><ul><li>기본 카드</li><li>선택 테두리</li></ul></dd></div><div><dt>크기</dt><dd><ul><li>기본 경계 1dp</li><li>선택 경계 2dp</li><li>그림자 0dp</li></ul></dd></div><div><dt>테마·토큰</dt><dd><ul><li>surface</li><li>onSurface</li><li>outlineVariant</li><li>primary</li><li>inkMuted</li></ul></dd></div><div><dt>접근성·사용 규칙</dt><dd>선택 역할과 상태는 실제 클릭 가능한 카드가 제공합니다.</dd></div><div><dt>공통 사용 여부</dt><dd>홈·보관함·템플릿·스튜디오 선택 카드에서 사용</dd></div><div><dt>설계 품질</dt><dd>카드 높이와 콘텐츠까지 강제하지 않아 도메인별 레이아웃을 유지함</dd></div><div><dt>판단</dt><dd>유지</dd></div><div><dt>판단 근거</dt><dd>대형 미리보기 카드와 옵션 카드에는 다른 모양·밀도 계약이 필요합니다.</dd></div><div><dt>구현·문서</dt><dd>현재 소스 위치와 심볼 확인</dd></div><div><dt>렌더링</dt><dd>미검증</dd></div></dl><h2>코드 예시</h2><p class="meta">실제 소스에서 발췌 · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/home/HomeEntryContent.kt#L170"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/home/HomeEntryContent.kt:170</code></a></p><pre tabindex="0"><code>Card(
+    onClick = onClick,
+    modifier = Modifier
+        .fillMaxWidth()
+        .testTag(&quot;home_generate_widget&quot;),
+    shape = RoundedCornerShape(24.dp),
+    colors = StudioCardDefaults.colors(),
+    border = StudioCardDefaults.border(),
+    elevation = StudioCardDefaults.elevation(),
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Text(
+                text = stringResource(R.string.generative_entry_title),
+                style = androidx.compose.material3.MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.SemiBold,
+                color = colors.onSurface,
+            )
+            Text(
+                text = stringResource(R.string.generative_entry_description),
+                style = androidx.compose.material3.MaterialTheme.typography.bodyMedium,
+                color = colors.onSurfaceVariant,
+            )
+        }
+        Icon(
+            painter = painterResource(R.drawable.ic_ui_chevron_right),
+            contentDescription = null,
+            tint = colors.onSurfaceVariant,
+        )
+    }
+}</code></pre><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p><h2>사용 화면</h2><ul><li><a href="../screens/home-dashboard.html">홈 위젯 대시보드</a></li><li><a href="../screens/widget-setup-start.html">미설정 위젯 시작</a></li><li><a href="../screens/saved-library.html">저장 위젯 보관함</a></li><li><a href="../screens/saved-document-menu.html">저장 위젯 메뉴</a></li><li><a href="../screens/template-gallery.html">위젯 템플릿 갤러리</a></li><li><a href="../screens/inactive-home-content.html">이전 홈 콘텐츠</a></li></ul><h2>관련 컴포넌트</h2><ul><li><a href="studio-section-card.html">StudioSectionCard</a></li><li><a href="studio-selectable-card.html">StudioSelectableCard</a></li></ul>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

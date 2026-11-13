@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>StudioOutlineIconButton · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html" aria-current="page">컴포넌트</a><a href="../screens/index.html">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">컴포넌트</a></p><h1>StudioOutlineIconButton</h1><p class="lead">뒤로가기와 보조 툴바 동작에 작은 시각 표면과 충분한 터치 영역을 제공합니다.</p><dl class="facts"><div><dt>컴포넌트 ID</dt><dd><code>studio-outline-icon-button</code></dd></div><div><dt>분류</dt><dd>탐색</dd></div><div><dt>구현</dt><dd><code>StudioOutlineIconButton</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/core/ui/StudioChromeControls.kt#L40"><code>MyWidget/app/src/main/java/com/mywidget/editor/core/ui/StudioChromeControls.kt:40</code></a></dd></div><div><dt>주요 API</dt><dd>onClick, enabled, modifier, visualSize, cornerRadius, visualModifier, content</dd></div><div><dt>지원 상태</dt><dd><ul><li>활성</li><li>비활성</li><li>눌림</li></ul></dd></div><div><dt>변형</dt><dd><ul><li>기본</li><li>편집기 34dp 표면</li><li>호출부 아이콘</li></ul></dd></div><div><dt>크기</dt><dd><ul><li>터치 48×48dp</li><li>기본 시각 36dp·반경 10dp</li><li>편집기 34dp·반경 9dp</li></ul></dd></div><div><dt>테마·토큰</dt><dd><ul><li>surface</li><li>onSurface</li><li>outlineVariant</li></ul></dd></div><div><dt>접근성·사용 규칙</dt><dd>아이콘이 현지화된 버튼 이름을 제공하며 비활성 상태를 전달합니다.</dd></div><div><dt>공통 사용 여부</dt><dd>앱 상단바와 설정·갤러리·보관함의 뒤로가기에서 사용</dd></div><div><dt>설계 품질</dt><dd>조작 크기와 시각 크기가 독립됨</dd></div><div><dt>판단</dt><dd>유지</dd></div><div><dt>판단 근거</dt><dd>접근성 대상과 작은 Chrome 표면을 일치시키는 기존 계약을 재사용합니다.</dd></div><div><dt>구현·문서</dt><dd>현재 소스 위치와 심볼 확인</dd></div><div><dt>렌더링</dt><dd>네이티브 캡처 있음</dd></div></dl><h2>코드 예시</h2><p class="meta">실제 소스에서 발췌 · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/androidTest/java/com/mywidget/editor/design/UiCatalogCaptureTest.kt#L409"><code>MyWidget/app/src/androidTest/java/com/mywidget/editor/design/UiCatalogCaptureTest.kt:409</code></a></p><pre tabindex="0"><code>StudioOutlineIconButton(onClick = {}, visualSize = 34.dp, cornerRadius = 9.dp) {
+    Icon(painterResource(R.drawable.ic_custom_icon_action_undo), contentDescription = &quot;실행 취소&quot;, Modifier.size(18.dp))
+}</code></pre><section data-collection><h2>Android 네이티브 예시</h2><p>아래 캡처에 표시된 상태와 기기 조건을 확인했습니다.</p><div class="filters" data-filters hidden><label>캡처 테마<select data-filter="theme"><option value="">전체</option><option value="light">라이트</option><option value="dark">다크</option></select></label><label>상태<select data-filter="state"><option value="">전체</option><option value="toolbar">toolbar</option></select></label></div><p class="filter-count" data-count role="status"></p><div class="capture-grid"><figure data-entry data-theme="light" data-state="toolbar"><div class="capture-frame"><img src="../captures/studio-outline-icon-button-toolbar-light.png" alt="toolbar · 라이트 Android 캡처" loading="lazy"></div><figcaption><strong>toolbar · 라이트</strong><br>411 × 891 dp · 560 dpi · 글꼴 1배 · API 35 · ko-KR<br>캡처 기준 HEAD <code>ff118cc8d</code> · 소스 지문 <code>73da2a0be891</code> · 2026-11-13T10:23:11.274577Z</figcaption></figure><figure data-entry data-theme="dark" data-state="toolbar"><div class="capture-frame"><img src="../captures/studio-outline-icon-button-toolbar-dark.png" alt="toolbar · 다크 Android 캡처" loading="lazy"></div><figcaption><strong>toolbar · 다크</strong><br>411 × 891 dp · 560 dpi · 글꼴 1배 · API 35 · ko-KR<br>캡처 기준 HEAD <code>ff118cc8d</code> · 소스 지문 <code>73da2a0be891</code> · 2026-11-13T10:23:11.274577Z</figcaption></figure></div></section><h2>사용 화면</h2><ul><li><a href="../screens/widget-setup-start.html">미설정 위젯 시작</a></li><li><a href="../screens/widget-setup-configured.html">구성된 위젯 편집·업데이트</a></li><li><a href="../screens/saved-library.html">저장 위젯 보관함</a></li><li><a href="../screens/template-gallery.html">위젯 템플릿 갤러리</a></li><li><a href="../screens/generate-prompt.html">AI 위젯 프롬프트</a></li><li><a href="../screens/generate-clarification.html">AI 위젯 질문과 답변</a></li><li><a href="../screens/generate-preview.html">AI 위젯 미리보기·저장</a></li><li><a href="../screens/editor-workspace.html">편집 작업 영역과 상단바</a></li><li><a href="../screens/editor-canvas-tools.html">프리뷰 위 선택·편집 도구</a></li><li><a href="../screens/editor-host-layout.html">위젯 크기 개요·초기화</a></li></ul><h2>관련 컴포넌트</h2><ul><li><a href="studio-primary-toolbar-button.html">StudioPrimaryToolbarButton</a></li><li><a href="studio-sheet-drag-handle.html">StudioSheetDragHandle</a></li></ul>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

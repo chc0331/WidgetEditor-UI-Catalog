@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>위젯 크기 선택 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>위젯 크기 선택</h1><p class="lead">홈과 보관함</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>home-size-picker</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>홈 추가·디버그 생성 또는 보관함 빈 화면의 만들기 → 크기 선택</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>소형·중형·대형 선택</li><li>확정 후 중복 클릭 차단</li><li>닫기·뒤로가기</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>선택 행</li><li>고정 주요 동작</li><li>콘텐츠 높이 시트</li></ul></dd></div><div><dt>평가</dt><dd>홈·보관함이 이미 동일한 화면을 사용합니다. 크기별 그림과 설명은 이 화면에 속합니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>실제 앱 경로 확인</dd></div><div><dt>실행 근거</dt><dd>API 35 HomeScreenLifecycleTest에서 첫 크기 선택과 런처 추가 요청을 검증했습니다. 런처는 테스트 대역을 사용했습니다. API 35 QaSmokeJourneyTest에서 실제 홈에서 열고 Activity를 재생성한 뒤 시스템 Back으로 닫았으며, 문서가 추가되지 않았습니다.</dd></div><div><dt>비고</dt><dd>일반 스튜디오 시트와 달리 콘텐츠 높이와 Android ModalBottomSheet의 닫기 정책을 사용합니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>WidgetSizePickerSheet</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/home/HomeEntryContent.kt#L530"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/home/HomeEntryContent.kt:530</code></a></li><li><code>WidgetSizeOptionCard</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/home/HomeEntryContent.kt#L580"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/home/HomeEntryContent.kt:580</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/studio-sheet-drag-handle.html">StudioSheetDragHandle</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

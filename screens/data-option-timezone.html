@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>시간대 검색 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>시간대 검색</h1><p class="lead">기능 연결</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>data-option-timezone</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>시간·시계 상세의 시간대 행 → 검색 시트</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>기기 기본</li><li>도시 검색</li><li>최근 선택</li><li>검색 결과 없음</li><li>선택 및 되돌아가기</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>검색·선택 목록</li><li>모달 헤더</li></ul></dd></div><div><dt>평가</dt><dd>시간대 초안과 목록 표현을 분리합니다. 설치 위젯 옵션에서도 같은 선택 시트를 호출합니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>컴포넌트 렌더 확인</dd></div><div><dt>실행 근거</dt><dd>API 35 WidgetDataConnectionDialogNavigationTest에서 시간대 선택의 임시 값과 복귀, 다음 일정의 권한 동작 노출을 검증했습니다. 실제 캘린더 권한은 미확인입니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>TimeZoneSelectionSheet</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/DataConnectionTimeZoneOptions.kt#L187"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/DataConnectionTimeZoneOptions.kt:187</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/studio-sheet.html">StudioSheet</a></li><li><a href="../components/studio-sheet-footer.html">StudioSheetFooter</a></li><li><a href="../components/studio-scroll-indicator.html">studioScrollIndicator</a></li><li><a href="../components/studio-text-field.html">StudioTextField</a></li><li><a href="../components/studio-selectable-card.html">StudioSelectableCard</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>편집 작업 영역과 상단바 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>편집 작업 영역과 상단바</h1><p class="lead">편집기</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>editor-workspace</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>홈·보관함·템플릿·생성 또는 위젯 설정 → editor</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>로딩</li><li>오류·재시도</li><li>빈 문서</li><li>정상</li><li>처리 중</li><li>실행 취소·다시 실행</li><li>추가·적용·업데이트·저장</li><li>액션 테스트</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>라이트</li><li>다크</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>한 줄 상단바</li><li>문서 메뉴</li><li>도구 독</li><li>두 단계 인스펙터</li></ul></dd></div><div><dt>평가</dt><dd>앱 조작과 authored canvas를 분리합니다. 타이틀은 말줄임하고 주요 액션의 48dp 영역을 보존합니다.</dd></div><div><dt>적용 상태</dt><dd>기존 구조 사용</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>실제 앱 경로 확인</dd></div><div><dt>실행 근거</dt><dd>API 35 QaSmokeJourneyTest에서 홈과 보관함을 거쳐 실제 문서를 편집기에 열고 뒤로 돌아왔습니다. 보관함의 필터와 홈의 긴 제목은 한·영 라이트·다크, 320~390dp, 글꼴 1~2배의 별도 렌더 테스트를 통과했습니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>EditorScreenContent</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorResponsiveLayout.kt#L17"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorResponsiveLayout.kt:17</code></a></li><li><code>EditorStudioWorkspace</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorStudioWorkspace.kt#L126"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorStudioWorkspace.kt:126</code></a></li><li><code>EditorPreviewTitleBar</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorPreviewTitleBar.kt#L32"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/editor/EditorPreviewTitleBar.kt:32</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/widget-editor-theme.html">WidgetEditorTheme</a></li><li><a href="../components/studio-outline-icon-button.html">StudioOutlineIconButton</a></li><li><a href="../components/studio-primary-toolbar-button.html">StudioPrimaryToolbarButton</a></li></ul><section data-collection><h2>Android 네이티브 예시</h2><p>아래 캡처에 표시된 상태와 기기 조건을 확인했습니다.</p><div class="filters" data-filters hidden><label>캡처 테마<select data-filter="theme"><option value="">전체</option><option value="light">라이트</option><option value="dark">다크</option></select></label><label>상태<select data-filter="state"><option value="">전체</option><option value="collapsed">collapsed</option></select></label></div><p class="filter-count" data-count role="status"></p><div class="capture-grid"><figure data-entry data-theme="light" data-state="collapsed"><div class="capture-frame"><img src="../captures/editor-workspace-collapsed-light.png" alt="collapsed · 라이트 Android 캡처" loading="lazy"></div><figcaption><strong>collapsed · 라이트</strong><br>411 × 891 dp · 560 dpi · 글꼴 1배 · API 35 · ko-KR<br>캡처 기준 HEAD <code>ff118cc8d</code> · 소스 지문 <code>73da2a0be891</code> · 2026-11-13T10:23:11.274577Z</figcaption></figure><figure data-entry data-theme="dark" data-state="collapsed"><div class="capture-frame"><img src="../captures/editor-workspace-collapsed-dark.png" alt="collapsed · 다크 Android 캡처" loading="lazy"></div><figcaption><strong>collapsed · 다크</strong><br>411 × 891 dp · 560 dpi · 글꼴 1배 · API 35 · ko-KR<br>캡처 기준 HEAD <code>ff118cc8d</code> · 소스 지문 <code>73da2a0be891</code> · 2026-11-13T10:23:11.274577Z</figcaption></figure></div></section>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>

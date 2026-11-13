@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>설치 위젯 Custom 진행률 · MyWidget UI 카탈로그</title>
+  <link rel="stylesheet" href="../assets/tokens.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+  <script defer src="../assets/catalog.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="masthead">
+    <a class="wordmark" href="../index.html">MyWidget<span> UI 카탈로그</span></a>
+    <button type="button" data-theme-control hidden>화면 테마 변경</button>
+  </header>
+  <div class="layout">
+    <nav aria-label="카탈로그" class="navigation"><a href="../index.html">개요</a><a href="../foundations.html">디자인 토큰</a><a href="../components/index.html">컴포넌트</a><a href="../screens/index.html" aria-current="page">화면 조사</a></nav>
+    <main id="main" tabindex="-1">
+      <p class="breadcrumb"><a href="index.html">화면 조사</a></p><h1>설치 위젯 Custom 진행률</h1><p class="lead">설치 위젯 동작</p><dl class="facts"><div><dt>화면 ID</dt><dd><code>widget-dialog-custom-progress</code></dd></div><div><dt>모듈</dt><dd>MyWidget :app</dd></div><div><dt>진입 경로</dt><dd>위젯 탭 → Custom 연결 → PROGRESS</dd></div><div><dt>구현 방식</dt><dd>Jetpack Compose</dd></div><div><dt>주요 상태</dt><dd><ul><li>기존 값</li><li>수치 키보드</li><li>범위 오류</li><li>변경 없음</li><li>적용·취소</li></ul></dd></div><div><dt>테마</dt><dd><ul><li>명시적 라이트</li><li>투명 XML Activity 창</li></ul></dd></div><div><dt>반복 UI</dt><dd><ul><li>런타임 수치 입력</li><li>초안 보호</li></ul></dd></div><div><dt>평가</dt><dd>수치의 유효성 검사는 호출부가 소유하고 폐기 확인의 외관을 공유합니다.</dd></div><div><dt>적용 상태</dt><dd>공용 폐기 확인으로 이관</dd></div><div><dt>코드 조사</dt><dd>코드 조사 완료</dd></div><div><dt>화면 확인</dt><dd>컴포넌트 렌더 확인</dd></div><div><dt>실행 근거</dt><dd>API 34·35에서 앱 편집 다이얼로그 콘텐츠의 설정 진입, 입력 오류, 로딩, 저장 실패, 목록 편집, 취소·폐기 확인을 검증했습니다. 시스템 홈 위젯 탭으로 여는 진입은 미확인입니다.</dd></div><div><dt>접근 조건</dt><dd>유효한 QA 위젯 바인딩·블록 ID·PendingIntent. Compose 테스트는 폼의 Activity 콘텐츠만 실행합니다.</dd></div></dl><h2>구현 위치</h2><ul><li><code>InteractionEditorContent</code> · <a href="https://github.com/chc0331/WidgetEditor/blob/b64e2801ba9441180071eeea0e75381983b469f9/MyWidget/app/src/main/java/com/mywidget/editor/feature/widgetblockdialog/WidgetInteractionDialogActivity.kt#L215"><code>MyWidget/app/src/main/java/com/mywidget/editor/feature/widgetblockdialog/WidgetInteractionDialogActivity.kt:215</code></a></li></ul><h2>사용 컴포넌트</h2><ul><li><a href="../components/widget-editor-theme.html">WidgetEditorTheme</a></li><li><a href="../components/widget-editor-sheet.html">WidgetEditorSheet</a></li><li><a href="../components/widget-sheet-input.html">WidgetSheetInput</a></li><li><a href="../components/studio-dialog.html">StudioDialog</a></li></ul><h2>Android 네이티브 예시</h2><p>이 항목의 현재 렌더링을 확인한 캡처가 없습니다.</p>
+    </main>
+  </div>
+  <footer class="footer">현재 소스에서 내보낸 네이티브 증거 · 소스 <code>b64e2801b</code></footer>
+</body>
+</html>
